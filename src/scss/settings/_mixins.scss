@@ -1,0 +1,10 @@
+@import "../settings/variables";
+
+@mixin logo () {
+    color: $c-blue;
+    font-family: $f-raleway;
+    font-size: 32px;
+    font-weight: 300;
+    text-align: left;
+    text-decoration: none;
+}

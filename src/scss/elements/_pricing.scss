@@ -1,0 +1,165 @@
+@import "../settings/variables";
+
+.pricing {
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.24);
+}
+
+.pricing-title {
+    font-family: $f-raleway;
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.pricing-boxes {
+    width: 100%;
+    height: 616px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricing-box {
+    min-width: 372px;
+    min-height: 461px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 18px;
+    margin: 0 28px;
+
+    transition: 0.3s;
+}
+
+.pricing-offer {
+    margin-top: 34px;
+}
+.pricing-offer__type {
+    font-family: $f-raleway;
+    font-size: 21px;
+    font-weight: 700;
+}
+.pricing-offer__price {
+    font-size: 46px;
+    font-weight: 300;
+    margin: 14px 0;
+    text-shadow: none;
+}
+.pricing-offer__limited {
+    font-family: $f-raleway;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: none;
+}
+
+.pricing-details__list {
+    margin-top: 50px;
+
+}
+.pricing-detail {
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+}
+.pricing-detail::before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    background: url("../images/checkmark-boxes-green.svg") no-repeat;
+    background-size: auto;
+    padding-left: 20px;
+
+    position: relative;
+    top: 5px;
+}
+.pricing-details--noincluded::before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    background: url("../images/checkmark-boxes-red.svg") no-repeat;
+    background-size: auto;
+    padding-left: 20px;
+}
+
+.pricing-details__btn {
+    border-radius: 23px;
+    color: #fff;
+    text-decoration: none;
+    font-family: $f-raleway;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 16px 64px;
+
+    position: relative;
+    top: 85px;
+}
+
+/* pricing modifier */
+
+.pricing-box--basic {
+    border: 1px solid $c-red;
+    width: 372px;
+    height: 461px;
+}
+.pricing-box--professional {
+    border: 1px solid $c-blue;
+    box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.16);
+    width: 405px;
+    height: 500px;
+}
+.pricing-box--premium {
+    border: 1px solid $c-green;
+    width: 372px;
+    height: 461px;
+}
+
+
+.pricing-box--basic:hover {
+    box-shadow: 5px 10px 27px rgba(251, 59, 100, 0.16);
+}
+.pricing-box--professional:hover {
+    box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.16);
+}
+.pricing-box--premium:hover{
+    box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.16);
+}
+
+
+.pricing-box--basic .pricing-offer__price {
+    color:  $c-red;
+    margin-bottom: 69px;
+}
+.pricing-box--professional .pricing-offer__price {
+    color:  $c-blue;
+}
+.pricing-box--premium .pricing-offer__price {
+    color:  $c-green;
+}
+
+.pricing-box--professional .pricing-offer__limited {
+    margin-bottom: 61px;
+}
+.pricing-box--premium .pricing-offer__limited {
+    margin-bottom: 50px;
+}
+
+
+.pricing-box--basic .pricing-details__btn {
+    background-color:  $c-red;
+    top: 65px;
+}
+.pricing-box--professional .pricing-details__btn {
+    background-color:  $c-blue;
+    top: 90px;
+}
+.pricing-box--premium .pricing-details__btn {
+    background-color:  $c-green;
+    top: 55px;
+}

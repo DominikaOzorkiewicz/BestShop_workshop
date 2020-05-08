@@ -1,0 +1,30 @@
+@import "../settings/variables";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $f-open-sans;
+}
+
+main {
+    background-color: #F7F7F7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1352px;
+    margin: 0 auto;
+
+    @media (max-width: 1352px) {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+}
+

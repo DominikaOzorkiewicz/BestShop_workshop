@@ -7,14 +7,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>BestShop</title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
-        <link rel='shortcut icon' type='image/x-icon' href='./dist/images/favicon.ico'>
-        <link rel="stylesheet" href="./dist/css/style.min.css">
+        <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico'>
+        <link rel="stylesheet" href="css/style.min.css">
     </head>
     <body>
 
         <div class="wrap-all">
             <header class="header">
-    <div class="container">
+    <div class="header-container container">
 
         <a href="" class="company-logo">BestShop</a>
 
@@ -22,18 +22,26 @@
 
             <ul class="menu-list">
                 <li class="menu-list__el is-active">
-                    <a href="/" class="menu-list__link">Why Us</a>
+                    <a href="#why-us" class="menu-list__link">Why Us</a>
                 </li>
                 <li class="menu-list__el">
-                    <a href="/" class="menu-list__link">Benefits</a>
+                    <a href="#benefits" class="menu-list__link">Benefits</a>
                 </li>
                 <li class="menu-list__el">
-                    <a href="/" class="menu-list__link">Prices</a>
+                    <a href="#pricing" class="menu-list__link">Prices</a>
                 </li>
                 <li class="menu-list__el">
-                    <a href="/" class="menu-list__link">Contact</a>
+                    <a href="#contact" class="menu-list__link">Contact</a>
                 </li>
             </ul>
+
+            <button class="dropdown-burger">
+                <div class="el1"></div>
+                <div class="el2"></div>
+                <div class="el3"></div>
+            </button>
+
+
 
         </nav>
 
@@ -55,7 +63,7 @@
     </div>
 </section>
             <section class="about">
-    <div class="container">
+    <div class="about-container container" id="why-us">
         <h2 class="about-title">The most popular sales platform in country</h2>
 
         <div class="about-singles-container">
@@ -105,7 +113,7 @@
 </section>
             <main>
                 <section class="benefits">
-    <div class="benefits-container container">
+    <div class="benefits-container container" id="benefits">
 
         <div class="benefits-row benefits-row--macbook">
             <article class="benefits-row__text">
@@ -146,7 +154,7 @@
     </div>
 </section>
                 <section class="pricing">
-    <div class="container">
+    <div class="pricing-container container" id="pricing">
         <h2 class="pricing-title">Pricing</h2>
 
         <div class="pricing-boxes">
@@ -207,7 +215,7 @@
     </div>
 </section>
                 <section class="contact">
-    <div class="container">
+    <div class="contact-container container" id="contact">
 
         <div class="contact-info">
             <h2 class="contact-info__title">Any questions?</h2>
@@ -275,6 +283,6 @@
 </footer>
         </div>
 
-        <script src="./dist/js/bundle.min.js"></script>
+        <script src="js/bundle.min.js"></script>
     </body>
 </html>

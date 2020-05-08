@@ -1,0 +1,131 @@
+@import "../settings/variables";
+@import "../settings/mixins";
+
+.header {
+    height: 70px;
+    box-shadow: 0 3px 6px #00000029;
+    background-color: #fff;
+
+    position: fixed;        //sticky nav menu
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    &-container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.company-logo {
+    @include logo();
+}
+
+.menu-list {
+    display: flex;
+    list-style-type: none;
+
+    &__link {
+        color: $c-grey;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 3.28px;
+        padding: 28px 18px 22px;
+        text-transform: uppercase;
+        align-items: center;
+        border-bottom: 4px solid transparent;
+
+        &:hover {
+            color: black;
+            border-color: $c-blue;
+            background: rgba(255, 255, 255, 0.22);
+            transition: 0.3s;
+        }
+    }
+
+    &__el.is-active {
+        .menu-list__link {
+            color: #000;
+        }
+    }
+}
+
+
+
+@media (max-width: 670px) {
+    .header {
+        position: static;
+    }
+
+    .menu-list {
+        overflow: hidden;
+        transition: 0.5s;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        box-shadow: 0 3px 6px #00000029, inset 2px 4px 6px #00000029;
+        background-color: #fff;
+
+        letter-spacing: 3.28px;
+        padding: 30px;
+        flex-direction: column;
+        opacity:0;
+        pointer-events: none;
+
+        &__link {
+            padding: 5px;
+
+            &:hover {
+                border: none;
+            }
+        }
+
+    }
+    .menu-list.show {
+        opacity: 1;
+        pointer-events: all;
+        margin-top: 0;
+    }
+}
+
+// --- burger menu ---
+
+.dropdown-burger {
+    display: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: white;
+
+    .el1, .el2, .el3 {
+        width: 35px;
+        height: 5px;
+        background-color: $c-blue;
+        margin: 6px 0;
+        transition: 0.4s;
+        border-radius: 5px;
+    }
+
+    &.change {
+        .el1 {
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        .el2 {
+            opacity: 0;
+        }
+        .el3 {
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    }
+
+    @media (max-width: 670px) {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+}

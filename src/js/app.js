@@ -1,10 +1,11 @@
-import {test, test2} from "./test";
-
-console.log('test')
-
 document.addEventListener("DOMContentLoaded", function() {
 
-    test();
-    test2();
+   const button = document.querySelector(".dropdown-burger");
+   const nav = document.querySelector(".menu-list");
+
+   button.addEventListener("click", function() {
+      button.classList.toggle("change");
+      nav.classList.toggle("show");
+   });
 
 });
