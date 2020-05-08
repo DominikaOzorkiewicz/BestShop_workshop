@@ -40,12 +40,12 @@ const server = (cb) => {
 };
 
 const css = function() {
-    return gulp.src("src/scss/style.scss")
+    return gulp.src("src/scss/main.scss")
         .pipe(wait(500))
         .pipe(sourcemaps.init())
         .pipe(
             sass({
-                outputStyle : "expanded"
+                outputStyle : "expanded"     ////nested, expanded, compact, compressed
             }).on("error", showError)
         )
         .pipe(autoprefixer())

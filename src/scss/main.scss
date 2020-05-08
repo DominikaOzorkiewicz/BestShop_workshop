@@ -1,0 +1,38 @@
+//variable
+@import "settings/variables";
+@import "settings/mixins";
+@import "settings/functions";
+
+//reset, normalize, helper-class
+@import "generic/normalize";
+// @import "generic/print";
+
+
+//elements
+@import "elements/header";
+@import "elements/banner";
+@import "elements/about";
+@import "elements/benefits";
+@import "elements/pricing";
+@import "elements/contact";
+@import "elements/footer";
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $f-open-sans;
+}
+main{
+    background-color: #F7F7F7;
+}
+
+.container {
+    max-width: 1626px;
+    margin: 0 auto;
+    padding: 0 136px;
+}
+

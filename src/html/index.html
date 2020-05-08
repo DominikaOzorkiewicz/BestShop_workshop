@@ -5,15 +5,25 @@
         <title></title>
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="./css/style.min.css">
+        <title>BestShop</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
+        <link rel='shortcut icon' type='image/x-icon' href='./dist/images/favicon.ico'>
+        <link rel="stylesheet" href="./dist/css/style.min.css">
     </head>
     <body>
 
         <div class="wrap-all">
             @@include('./inc/_header.html')
-            @@include('./inc/_section1.html')
+            @@include('./inc/_banner.html')
+            @@include('./inc/_about.html')
+            <main>
+                @@include('./inc/_benefits.html')
+                @@include('./inc/_pricing.html')
+                @@include('./inc/_contact.html')
+            </main>
+            @@include('./inc/_footer.html')
         </div>
 
-        <script src="js/bundle.min.js"></script>
+        <script src="./dist/js/bundle.min.js"></script>
     </body>
 </html>
