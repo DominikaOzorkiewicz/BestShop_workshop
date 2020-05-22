@@ -1,33 +1,31 @@
+@import "../settings/mixins";
 @import "../settings/variables";
 
 .banner {
-    height: 712px;
     width: 100%;
     margin-top: 130px;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.24);
-
     position: relative;
 }
-.banner-title {
-    color: #000;
+.banner__title {
+    color: black;
     font-family: $f-raleway;
-    font-size: 49px;
+    font-size: 3.0625em;
     font-weight: 400;
     text-align: center;
-    line-height: 57px;
     padding: 20px;
 }
-.banner-text {
+.banner__text {
     font-size: 16px;
     font-weight: 400;
     text-align: center;
     line-height: 22px;
     padding-bottom: 38px;
 }
-.banner-btn {
+.banner__btn {
     padding: 22px 157px;
     background: $c-blue;
     color: white;
@@ -36,11 +34,20 @@
     box-shadow: 5px 10px 14px #07ACE629;
     border-radius: $btn-radius;
     text-decoration: none;
+
+    @include mobile {
+        transition: 0.2s;
+        margin: 0 15px;
+        padding: 20px 100px;
+    }
+    @media (max-width: 400px) {
+        padding: 20px 50px;
+    }
 }
-.banner-btn:hover {
+.banner__btn:hover {
     box-shadow: 0 0 15px 10px #07ACE629;
 }
-.banner-image {
+.banner__image {
     width: 100%;
     height: 594px;
     margin-bottom: 0;
@@ -49,9 +56,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
 }
-.banner-image__img {
+.banner__image-img {
     object-fit: cover;
     bottom: 0;
     left: 0;
