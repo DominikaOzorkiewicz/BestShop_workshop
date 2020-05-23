@@ -91,11 +91,19 @@
             border-radius: 6px;
             border: 1px solid $c-red;
             overflow: hidden;
+            margin-top: 0;
+
+            &:hover {
+                box-shadow: 0 1px 10px $c-red;
+            }
 
             li {
                 font-size: 13px;
-                padding: 10px 20px;
+                padding: 10px 0;
+                list-style: none;
                 cursor: pointer;
+                position: relative;
+                left: -5%;
 
                 &:hover {
                     background-color: $c-light-grey;
@@ -178,7 +186,8 @@
             align-items: center;
             color: white;
             font-size: 0.875rem;
-            //display: none;
+
+            display: none;      // <---
 
             &.open {
                 display: flex;
@@ -202,8 +211,10 @@
             padding: 6px 20px;
             background-color: $c-green;
             margin-bottom: 8px;
-            display: flex;
+            //display: flex;
             justify-content: space-between;
+
+            display: none;              // <--
 
             .item {
                 &__price {
