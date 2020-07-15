@@ -23,6 +23,9 @@ $ npm install
 $ gulp
 ```
 
-## Preview
-![BestShop preview](preview/preview.png)
+## Live preview
+[Demo](https://dominikaozorkiewicz.github.io/BestShop_workshop/)
 
+## Preview
+
+![BestShop preview](preview/preview.png)
