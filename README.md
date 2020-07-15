@@ -1,8 +1,28 @@
-Po zainstalowaniu templatki (npm i) odpalamy ją poleceniem  "gulp"
+## Best Shop
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
-Jest to templatka, która dzieli pracę na 2 katalogi: src i dist.
+## General info
+Project created during [Coders Lab](https://coderslab.pl/) course.
 
-Całą pracę (edycję plików) robimy w katalogu src. Na jego podstawie budowana jest strona w katalogu dist.
-Jedyna rzecz którą trzeba ręcznie wrzucić do dist to images, bo automatycznie
-generowany jest html, js i css.
+	
+## Technologies
+Project is created with:
+* HTML5
+* Sass
+* Gulp
+* Webpack
+* JavaScript
+	
+## Setup
+To run this project, install it locally using npm:
+
+```
+$ npm install
+$ gulp
+```
+
+## Preview
+![BestShop preview](preview/preview.png)
 

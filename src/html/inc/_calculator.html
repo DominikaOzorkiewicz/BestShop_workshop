@@ -2,7 +2,9 @@
     <h2>Calculate how much you’ll pay</h2>
 
     <div class="calc__columns">
+
         <form class="calc__form">
+
             <div class="calc__input">
                 <input type="number" class="form__input" id="products" min="1" step="1" placeholder="Products quantity"/>
             </div>
@@ -20,16 +22,17 @@
                     <li data-value="premium">Premium</li>
                 </ul>
             </div>
-            <label class="form__checkbox">
-                <input type="checkbox" id="accounting"/>
-                <span class="checkbox" id="checkbox-accounting"></span>
-                <p class="consent__text">Accounting</p>
-            </label>
-            <label class="form__checkbox">
-                <input type="checkbox" id="terminal"/>
-                <span class="checkbox" id="checkbox-terminal"></span>
-                <p class="consent__text">Rental of a payment terminal</p>
-            </label>
+
+            <div class="calc__checkbox">
+                <input type="checkbox" id="checkbox-accounting" class="calc__checkbox-input"/>
+                <label for="checkbox-accounting" class="calc__checkbox-label">Accounting</label>
+            </div>
+
+            <div class="calc__checkbox">
+                <input type="checkbox" id="checkbox-terminal" class="calc__checkbox-input"/>
+                <label for="checkbox-terminal" class="calc__checkbox-label">Rental of a payment terminal</label>
+            </div>
+
         </form>
 
         <div class="calc__summary">
@@ -58,10 +61,14 @@
                     <span class="item__price">$10</span>
                 </li>
             </ul>
+
             <div class="summary__total" id="total-price">
                 <span>Total</span>
                 <span class="total__price">$700</span>
             </div>
+
         </div>
+
     </div>
+
 </section>

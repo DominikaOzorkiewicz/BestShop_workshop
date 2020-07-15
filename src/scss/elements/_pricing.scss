@@ -3,164 +3,190 @@
 
 .pricing {
     display: flex;
-    background-color: #fff;
-    width: 100%;
-    text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.24);
-}
-
-.pricing-title {
-    font-family: $f-raleway;
-    font-size: 36px;
-    font-weight: 400;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 0;
-    margin: 0;
-}
-
-.pricing-boxes {
-    width: 100%;
-    height: 616px;
-
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
+    text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.24);
 
-.pricing-box {
-    min-width: 372px;
-    min-height: 461px;
-    text-align: center;
-    border: 1px solid;
-    border-radius: 18px;
-    margin: 0 28px;
+    @include notebook { margin: 50px auto }
 
-    transition: 0.3s;
-}
+    &__title {
+        font-size: 36px;
+        font-weight: 400;
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 0;
+        margin: 0;
 
-.pricing-offer {
-    margin-top: 34px;
-}
-.pricing-offer__type {
-    font-family: $f-raleway;
-    font-size: 21px;
-    font-weight: 700;
-}
-.pricing-offer__price {
-    font-size: 46px;
-    font-weight: 300;
-    margin: 14px 0;
-    text-shadow: none;
-}
-.pricing-offer__limited {
-    font-family: $f-raleway;
-    font-size: 12px;
-    font-weight: 700;
-    text-align: center;
-    text-shadow: none;
-}
+        @include notebook { padding-top: 0 }
+    }
 
-.pricing-details__list {
-    margin-top: 50px;
+    &__boxes {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-}
-.pricing-detail {
-    font-size: 14px;
-    line-height: 40px;
-    text-align: center;
-}
-.pricing-detail::before {
-    content: '';
-    width: 11px;
-    height: 11px;
-    background: url("../images/checkmark-boxes-green.svg") no-repeat;
-    background-size: auto;
-    padding-left: 20px;
+        @include notebook {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
 
-    position: relative;
-    top: 5px;
-}
-.pricing-details--noincluded::before {
-    content: '';
-    width: 11px;
-    height: 11px;
-    background: url("../images/checkmark-boxes-red.svg") no-repeat;
-    background-size: auto;
-    padding-left: 20px;
-}
+    &__box {
+        min-width: 372px;
+        border: 1px solid;
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
 
-.pricing-details__btn {
-    border-radius: 23px;
-    color: #fff;
-    text-decoration: none;
-    font-family: $f-raleway;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 16px 64px;
+        @include notebook {
+            width: 100%;
+            max-width: 370px;
+            margin-bottom: 50px;
+            padding: 25px 10px 0 10px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
 
-    position: relative;
-    top: 85px;
-}
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 
-/* pricing modifier */
+    &__offer {
+        margin: 34px 0 50px 0;
+        text-align: center;
 
-.pricing-box--basic {
-    border: 1px solid $c-red;
-    width: 372px;
-    height: 461px;
-}
-.pricing-box--professional {
-    border: 1px solid $c-blue;
-    box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.16);
-    width: 405px;
-    height: 500px;
-}
-.pricing-box--premium {
-    border: 1px solid $c-green;
-    width: 372px;
-    height: 461px;
-}
+        @include notebook {
+            width: 50%;
+            margin: 0;
+        }
+
+        &-type {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        &-price {
+            font-size: 2.875rem;
+            font-weight: 300;
+            color: var(--accent-color);
+            text-shadow: none;
+            margin-top: 25px;
+        }
+
+        &-limited {
+            font-size: 0.75rem;
+            font-family: $f-raleway;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: none;
+        }
+    }
+
+    &__details {
+        list-style-type: none;
+        text-align: center;
+        padding: 0;
+
+        @include notebook {
+            width: 50%;
+            text-align: left;
+        }
+
+        &-btn {
+            font-size: 0.8125rem;
+            color: #fff;
+            text-shadow: none;
+            font-weight: 600;
+            background-color: var(--accent-color);
+            padding: 16px 65px;
+
+            border-radius: 23px;
+            position: relative;
+            bottom: -25px;
+        }
+    }
+
+    &__detail {
+        font-size: 0.875em;
+        margin-bottom: 20px;
+
+        @include notebook {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &::before {
+            content: '';
+            background: url("../images/checkmark-boxes-green.svg") no-repeat;
+            background-size: auto;
+            width: 11px;
+            height: 11px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        &--notIncluded::before {
+            background-image: url("../images/checkmark-boxes-red.svg");
+        }
+    }
 
 
-.pricing-box--basic:hover {
-    box-shadow: 5px 10px 27px rgba(251, 59, 100, 0.16);
-}
-.pricing-box--professional:hover {
-    box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.16);
-}
-.pricing-box--premium:hover{
-    box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.16);
-}
+    // ----- modifier (basic, professional, premium boxes) ----- //
+    &__box  {
+        border: 1px solid var(--accent-color);
 
+        &--basic {
+            --accent-color: #{$c-red};
 
-.pricing-box--basic .pricing-offer__price {
-    color:  $c-red;
-    margin-bottom: 69px;
-}
-.pricing-box--professional .pricing-offer__price {
-    color:  $c-blue;
-}
-.pricing-box--premium .pricing-offer__price {
-    color:  $c-green;
-}
+            &:hover {
+                box-shadow: 5px 10px 27px rgba(251, 59, 100, 0.16);
+            }
 
-.pricing-box--professional .pricing-offer__limited {
-    margin-bottom: 61px;
-}
-.pricing-box--premium .pricing-offer__limited {
-    margin-bottom: 50px;
-}
+            .pricing__offer-price {
+                color: $c-red;
+                margin-bottom: 30px;
 
+                @include notebook {
+                    margin-bottom: 0;
+                }
+            }
+        }
 
-.pricing-box--basic .pricing-details__btn {
-    background-color:  $c-red;
-    top: 65px;
-}
-.pricing-box--professional .pricing-details__btn {
-    background-color:  $c-blue;
-    top: 90px;
-}
-.pricing-box--premium .pricing-details__btn {
-    background-color:  $c-green;
-    top: 55px;
+        &--professional {
+            --accent-color: #{$c-blue};
+            margin: 0 40px;
+            box-shadow: 5px 1px 27px rgba(7, 172, 230, 0.16);
+
+            &:hover {
+                box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.16)
+            }
+
+            .pricing__offer-price {color: $c-blue }
+        }
+
+        &--premium {
+            --accent-color: #{$c-green};
+
+            @include notebook { margin-top: 50px }
+
+            .pricing__details-btn {
+                @include notebook { margin-top: 0 }
+            }
+
+            &:hover {
+                box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.16);
+            }
+
+            .pricing__offer-price {
+                color: $c-green;
+                margin-bottom: 30px;
+            }
+        }
+    }
 }

@@ -3,11 +3,13 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: $f-open-sans;
+    overflow-x: hidden;
 }
 
 main {
@@ -16,6 +18,10 @@ main {
 
 a {
     text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: $f-raleway;
 }
 
 .container {
