@@ -31,6 +31,10 @@
             flex-direction: column;
             width: 100%;
         }
+
+        @include mobile {
+            transform: scale(0.85);
+        }
     }
 
     &__box {

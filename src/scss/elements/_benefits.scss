@@ -16,7 +16,6 @@
         @include tablet { padding: 0 15px }
     }
 
-
     &__row {
         background-color: white;
         border: 1px solid #E8E9ED;
@@ -69,6 +68,7 @@
         &-image {
             position: relative;
         }
+
         img {
             position: relative;
             z-index: 2;
@@ -127,7 +127,6 @@
     }
 }
 
-
 // ----- benefits modifier ----- //
 
 .benefits__row {
@@ -176,7 +175,6 @@
             .benefits__row-content { margin: 30px 0 }
         }
     }
-
 
     //  iPhone row //
     &--iphone {

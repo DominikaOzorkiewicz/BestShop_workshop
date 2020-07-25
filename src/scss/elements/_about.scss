@@ -4,6 +4,10 @@
 .about {
     margin-top: 100px;
 
+    @include mobile {
+        margin-top: 0;
+    }
+
     &__title {
         font-family: $f-raleway;
         font-size: 2.25em;
@@ -18,68 +22,68 @@
             transition: 0.2s;
         }
     }
-}
 
-.about__singles-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 100px auto 120px;
-    max-width: 800px;
-
-    @include mobile {
-        margin: 35px auto 50px;
-        align-items: center;
+    &__single {
+        width: 163px;
+        display: flex;
+        justify-content: flex-start;
         flex-direction: column;
-    }
-}
+        align-items: center;
+        transition: 0.2s;
 
-.about__single {
-    width: 163px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
-    transition: 0.2s;
+        @include mobile {
+            margin-bottom: 35px;
 
-    @include mobile {
-        margin-bottom: 35px;
-
-        &:last-child {
-            margin-bottom: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
-    }
 
-    &-title {
-        font-family: $f-raleway;
-        font-size: 1.25em;
-        font-weight: 800;
-        text-align: center;
-        letter-spacing: 5.96px;
-        margin-top: 14px;
-        margin-bottom: 19px;
-    }
+        &-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 100px auto 120px;
+            max-width: 800px;
 
-    &-text {
-        font-family: $f-raleway;
-        color: $c-grey;
-        font-size: 1em;
-        font-weight: 400;
-        text-align: center;
-    }
+            @include mobile {
+                margin: 35px auto 50px;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
 
-    &-image {
-        position: relative;
-        bottom: 20px;
-    }
+        &-title {
+            font-family: $f-raleway;
+            font-size: 1.25em;
+            font-weight: 800;
+            text-align: center;
+            letter-spacing: 5.96px;
+            margin-top: 14px;
+            margin-bottom: 19px;
+        }
 
-    &:nth-child(1) .about__circle {
-        background-color: $c-red;
-    }
-    &:nth-child(2) .about__circle {
-        background-color: $c-blue;
-    }
-    &:nth-child(3) .about__circle {
-        background-color: $c-green;
+        &-text {
+            font-family: $f-raleway;
+            color: $c-grey;
+            font-size: 1em;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        &-image {
+            position: relative;
+            bottom: 20px;
+        }
+
+        &:nth-child(1) .about__circle {
+            background-color: $c-red;
+        }
+        &:nth-child(2) .about__circle {
+            background-color: $c-blue;
+        }
+        &:nth-child(3) .about__circle {
+            background-color: $c-green;
+        }
     }
 }
 

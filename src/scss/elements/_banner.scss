@@ -2,64 +2,84 @@
 @import "../settings/variables";
 
 .banner {
-    width: 100%;
+    //width: 100%;
     margin-top: 130px;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.24);
     position: relative;
-}
-.banner__title {
-    color: black;
-    font-family: $f-raleway;
-    font-size: 3.0625em;
-    font-weight: 400;
-    text-align: center;
-    padding: 20px;
-}
-.banner__text {
-    font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-    line-height: 22px;
-    padding-bottom: 38px;
-}
-.banner__btn {
-    padding: 22px 157px;
-    background: $c-blue;
-    color: white;
-    font-size: 14px;
-    font-weight: 700;
-    box-shadow: 5px 10px 14px #07ACE629;
-    border-radius: $btn-radius;
-    text-decoration: none;
 
-    @include mobile {
-        transition: 0.2s;
-        margin: 0 15px;
-        padding: 20px 100px;
-    }
-    @media (max-width: 400px) {
-        padding: 20px 50px;
-    }
-}
-.banner__btn:hover {
-    box-shadow: 0 0 15px 10px #07ACE629;
-}
-.banner__image {
-    width: 100%;
-    height: 594px;
-    margin-bottom: 0;
-    flex-grow: 1;
+    overflow: hidden;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-.banner__image-img {
-    object-fit: cover;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    &__title {
+        color: black;
+        font-family: $f-raleway;
+        font-size: 3.0625em;
+        font-weight: 400;
+        text-align: center;
+        padding: 20px;
+    }
+
+    &__text {
+        font-size: 1em;
+        font-weight: 400;
+        text-align: center;
+        line-height: 22px;
+        padding-bottom: 38px;
+
+        @include mobile {
+            padding: 0 15px 38px 15px;
+        }
+    }
+
+    &__btn {
+        padding: 22px 157px;
+        background: $c-blue;
+        color: white;
+        font-size: 0.875em;
+        font-weight: 700;
+        box-shadow: 5px 10px 14px #07ACE629;
+        border-radius: $btn-radius;
+        text-decoration: none;
+
+        @include mobile {
+            transition: 0.2s;
+            margin: 0 15px;
+            padding: 20px 100px;
+        }
+        @media (max-width: 400px) {
+            padding: 20px 50px;
+        }
+
+        &:hover {
+            box-shadow: 0 0 15px 10px #07ACE629;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        margin-bottom: 0;
+        flex-grow: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile {
+            height: 100%;
+        }
+
+        &-img {
+            object-fit: cover;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            //width: 100vw;
+
+            @include  mobile {
+            transform: scale(.57) translate(0,-30%);
+            }
+        }
+    }
 }
