@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-
     // ---------------- BURGER MENU ----------------
-
     const button = document.querySelector(".dropdown-burger");
     const nav = document.querySelector(".menu__list");
 
@@ -9,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
         button.classList.toggle("change");
         nav.classList.toggle("show");
     });
-
 
     // --------------- CALCULATOR --------------- //
 
@@ -52,23 +49,19 @@ document.addEventListener("DOMContentLoaded", function() {
         // ------------ PRODUCT FUNCTION ------------ //
         this.setProductValue = function (value) {
             this.product = value;
-
             calcProduct.innerText = `${this.product} * $0.5`;
             priceProduct.innerText = `$ ${this.product * 0.5}`;
-
             if (this.product > 0) {
                 rowProduct.style.display = 'flex';
             } else {
                 rowProduct.style.display = 'none';
             }
-
             // Check if any number of products and orders is set
             if (this.product > 0 && this.order > 0) {
                 rowPackage.style.display = 'flex';
             } else {
                 rowPackage.style.display = 'none';
             }
-
             this.calculateTotalPrice();
         }
 
@@ -91,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 rowPackage.style.display = 'none';
             }
-
             this.calculateTotalPrice();
         }
 
@@ -111,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 case 'Premium':
                     this.package = 90;
                     break;
-
             }
 
             // Check if any number of products and orders is set
@@ -159,15 +150,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // ------------ INPUTS EVENTS ------------ //
     productsInput.addEventListener('input', function (event) {
         myShopping.setProductValue(this.value);
-    })
+    });
 
     ordersInput.addEventListener('input', function (event) {
         myShopping.setOrderValue(this.value);
-    })
+    });
 
     selectInput.addEventListener('click', function (event) {
         selectInput.parentElement.classList.toggle('open');
-    })
+    });
 
     // --- li ELEMENTS EVENT --- //
     Array.from(packageOptions).map(function (element) {
@@ -177,8 +168,8 @@ document.addEventListener("DOMContentLoaded", function() {
             selectInput.innerText = event.target.innerText;
             selectInput.parentElement.classList.toggle('open');
 
-        })
-    })
+        });
+    });
 
     // --- CHECKBOXES EVENTS --- //
     accountingCheckbox.addEventListener('change', function (event) {
@@ -189,7 +180,7 @@ document.addEventListener("DOMContentLoaded", function() {
             rowAccounting.style.display = 'none';
             myShopping.setAccounting(0);
         }
-    })
+    });
 
     terminalCheckbox.addEventListener('change', function (event) {
         if (event.target.checked !== false) {
@@ -199,6 +190,6 @@ document.addEventListener("DOMContentLoaded", function() {
             rowTerminal.style.display = 'none';
             myShopping.setTerminal(0);
         }
-    })
+    });
 
 });

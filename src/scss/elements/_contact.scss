@@ -1,7 +1,6 @@
 @import "../settings/mixins";
 @import "../settings/variables";
 
-
 .contact {
     background-color: #fff;
 
@@ -9,7 +8,6 @@
         padding: 80px 100px 100px;
         display: flex;
         justify-content: center;
-
 
         @include tablet {
             flex-direction: column;
@@ -100,22 +98,18 @@
         }
     }
 
-
     // --- Form column --- //
     &__form {
         width: 50%;
-        height: 372px;
 
         @include tablet {
             width: 100%;
             padding: 0 30px;
         }
     }
-
 }
 .form {
     &__row {
-
         &--last {
             display: flex;
             justify-content: flex-end;
